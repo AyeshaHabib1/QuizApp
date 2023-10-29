@@ -1,0 +1,125 @@
+import 'package:QuizApp/models/flutter_topics_model.dart';
+import 'package:QuizApp/views/flashcard_screen.dart';
+import 'package:flutter/material.dart';
+
+import '../widgets/gradient_appbar.dart';
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    Color bgColor = Colors.black26;
+    Color bgColor3 = Colors.yellowAccent;
+    return Scaffold(
+      appBar: GradientAppBar(height: 56.0),
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: [Colors.yellowAccent, Colors.green],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight)),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 0, left: 15, right: 15),
+            child: ListView(
+              physics: const BouncingScrollPhysics(),
+              children: [
+                Container(
+                  height: 200,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.green, Colors.yellowAccent],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.24),
+                        blurRadius: 20.0,
+                        offset: const Offset(0.0, 10.0),
+                        spreadRadius: -10,
+                        blurStyle: BlurStyle.outer,
+                      )
+                    ],
+                  ),
+                  child: Image.asset("assets/dash.png"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+
+                const SizedBox(
+                  height: 10,
+                ),
+                GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 0.85,
+                  ),
+                  shrinkWrap: true,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: flutterTopicsList.length,
+                  itemBuilder: (context, index) {
+                    final topicsData = flutterTopicsList[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NewCard(
+                              typeOfTopic: topicsData.topicQuestions,
+                              topicName: topicsData.topicName,
+                            ),
+                          ),
+                        );
+                        print(topicsData.topicName);
+                      },
+                      child: Card(
+                        color: bgColor,
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                topicsData.topicIcon,
+                                color: Colors.white,
+                                size: 55,
+                              ),
+                              const SizedBox(
+                                height: 15,
+                              ),
+                              Text(
+                                topicsData.topicName,
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineSmall!
+                                    .copyWith(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

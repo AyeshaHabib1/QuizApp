@@ -1,2 +1,7 @@
-# QuizApp
-Quiz App with Multiple cards & and a navigation bar with true-false and multiple choice questions...
+![WhatsApp Image 2023-10-29 at 6 07 18 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/676f4880-7c2c-44c4-bb72-1d94e0dbdc22)
+![WhatsApp Image 2023-10-29 at 6 07 46 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/2f5fffd8-62e4-4404-9632-fa0fc046ebd5)
+![WhatsApp Image 2023-10-29 at 6 08 03 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/9b71733f-4c35-4871-889a-008b5af8c6f6)
+![WhatsApp Image 2023-10-29 at 6 08 56 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/b92c27b9-526e-4644-8f81-4efb031b4a7c)
+![WhatsApp Image 2023-10-29 at 6 09 17 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/95851fe9-3504-43d9-b245-32abf760a156)
+![WhatsApp Image 2023-10-29 at 6 09 32 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/4204b39a-1a94-4e83-acff-446a7d609dd6)
+![WhatsApp Image 2023-10-29 at 6 08 19 AM](https://github.com/AyeshaHabib1/QuizApp/assets/127196273/054c5de9-a050-43a3-9370-744da20e5d7c)
